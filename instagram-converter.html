@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script>
+    function myFunction() {
+    resultText=document.getElementById("sourceText").value;
+	resultText=resultText.replaceAll("д", "g");
+	resultText=resultText.replaceAll("т", "m");
+	resultText=resultText.replaceAll("п", "n");
+	resultText=resultText.replaceAll("и", "u");
+	document.getElementById("resultText").value=resultText;
+    }
+</script>
+</head>
+<body>
+<textarea id="sourceText" type="text" name="исходный текст" placeholder="исходный текст" cols="50" rows="5"></textarea>
+</br></br>
+
+<textarea id="resultText" type="text" name="преобразованный текст" placeholder="преобразованный текст" cols="50" rows="5" readonly></textarea>
+
+<p>
+	<button type="submit" onclick="myFunction()">Преобразовать</button> 
+</p>
+</body>
+</html>
